@@ -1,2 +1,2 @@
 local opts = { silent = true }
-vim.keymap.set("n", "<leader>b", vim.cmd.ToggleBlameLine, opts)
+vim.keymap.set("n", "∫", vim.cmd.ToggleBlameLine, opts)
