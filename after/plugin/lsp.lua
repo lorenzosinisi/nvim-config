@@ -10,7 +10,6 @@ lsp.ensure_installed({
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer= bufnr, remap = false}
-  vim.keymap.set("n", "A", ":lua vim.lsp.buf.code_action()", opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
 end)
 
