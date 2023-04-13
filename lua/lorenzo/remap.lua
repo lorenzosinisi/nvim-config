@@ -1,4 +1,4 @@
-vim.g.mapleader = ","
+-- vim.g.mapleader = ","
 -- vim.opt.scrolloff = 999
 
 vim.o.clipboard = "unnamedplus"

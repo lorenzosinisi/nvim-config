@@ -10,6 +10,11 @@ return require('packer').startup(function(use)
   use 'tpope/vim-projectionist'
   use 'phoenixframework/tree-sitter-heex'
 
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
+
+  use 'voldikss/vim-floaterm'
   -- To improve buffer deletion
   use {'ojroques/nvim-bufdel'}
 
