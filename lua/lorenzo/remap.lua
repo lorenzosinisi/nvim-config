@@ -40,11 +40,10 @@ function YankedToClipboard()
   print(block_of .. N .. " " .. lines .. " yanked to clipboard")
 end
 
-
 -- Navigate Buffers
-vim.keymap.set("n", "<leader>v", ":bnext<CR>", opts)
-vim.keymap.set("n", "<leader>z", ":bprevious<CR>", opts)
-vim.keymap.set("n", "<leader>d", ":BufDel<CR>", opts)
+vim.keymap.set("n", "√", ":bnext<CR>", opts)
+vim.keymap.set("n", "©", ":bprevious<CR>", opts)
+vim.keymap.set("n", "∂", ":BufDel<CR>", opts)
 vim.keymap.set("n", "<C-s>", ":bpick<CR>", opts)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

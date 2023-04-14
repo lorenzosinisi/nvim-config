@@ -15,6 +15,18 @@ return require('packer').startup(function(use)
   end}
 
   use 'voldikss/vim-floaterm'
+
+  use {"EdenEast/nightfox.nvim", config = function() vim.cmd("colorscheme nightfox") end}
+
+  use { "beauwilliams/focus.nvim", config = function() require("focus").setup() end }
+-- Or lazy load with `module` option. See further down for info on how to lazy load when using FocusSplit commands
+-- Or lazy load this plugin by creating an arbitrary command using the cmd option in packer.nvim
+-- use { 'beauwilliams/focus.nvim', cmd = { "FocusSplitNicely", "FocusSplitCycle" }, module = "focus",
+--     config = function()
+--         require("focus").setup({hybridnumber = true})
+--     end
+-- }
+
   -- To improve buffer deletion
   use {'ojroques/nvim-bufdel'}
 
@@ -131,6 +143,3 @@ return require('packer').startup(function(use)
     end
   }
 end)
-
-
-
