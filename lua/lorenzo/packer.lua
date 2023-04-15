@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-spectre'
   use 'tpope/vim-projectionist'
   use 'phoenixframework/tree-sitter-heex'
+  use 'jreybert/vimagit'
 
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
@@ -106,7 +107,6 @@ return require('packer').startup(function(use)
 		}
 	}
 
-  use('voldikss/vim-floaterm')
   use('preservim/nerdcommenter')
   use('mg979/vim-visual-multi')
   use('preservim/vimux')
