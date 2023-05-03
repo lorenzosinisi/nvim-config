@@ -47,9 +47,9 @@ vim.diagnostic.config({
 
 vim.lsp.set_log_level("info")
 
-vim.api.nvim_command("au BufWritePre *.ex lua vim.lsp.buf.format()")
-vim.api.nvim_command("au BufWritePre *.exs lua vim.lsp.buf.format()")
-vim.api.nvim_command("au BufWritePre *.heex lua vim.lsp.buf.format()")
+vim.api.nvim_command("au BufWritePre *.ex lua vim.lsp.buf.format({async = false})")
+vim.api.nvim_command("au BufWritePre *.exs lua vim.lsp.buf.format({async = false})")
+vim.api.nvim_command("au BufWritePre *.heex lua vim.lsp.buf.format({async = false})")
 vim.api.nvim_command("au InsertLeave,WinEnter * setlocal foldmethod=expr")
 vim.api.nvim_command("au InsertEnter,WinLeave * setlocal foldmethod=manual")
 vim.api.nvim_command("au InsertLeave,WinEnter,BufReadPost,FileReadPost * normal zR")

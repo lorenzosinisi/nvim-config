@@ -3,6 +3,11 @@ vim.api.nvim_set_keymap('n', 'π',
   { noremap = true, silent = true }
 )
 
+vim.api.nvim_set_keymap('n', '™',
+  "<cmd>lua require('fzf-lua').buffers()<CR>",
+  { noremap = true, silent = true }
+)
+
 vim.api.nvim_set_keymap('n', '<leader>p',
   "<cmd>lua require('fzf-lua').files()<CR>",
   { noremap = true, silent = true }
@@ -18,7 +23,7 @@ vim.api.nvim_set_keymap('n', '<C-q>',
   { noremap = true, silent = true }
 )
 vim.api.nvim_set_keymap('n', 'ƒ',
-  "<cmd>lua require('fzf-lua').live_grep_resume()<CR>",
+  "<cmd>lua require('fzf-lua').live_grep({cmd = \"git grep --line-number --column --color=always\"})<CR>",
   { noremap = true, silent = true }
 )
 vim.api.nvim_set_keymap('n', '<C-g>',

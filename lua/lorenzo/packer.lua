@@ -11,6 +11,10 @@ return require('packer').startup(function(use)
   use 'phoenixframework/tree-sitter-heex'
   use 'jreybert/vimagit'
 
+  use {'ggandor/leap.nvim', config = function ()
+    require('leap').add_default_mappings()
+  end}
+
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
   end}
