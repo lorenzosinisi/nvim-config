@@ -41,11 +41,19 @@ function YankedToClipboard()
 end
 
 -- Navigate Buffers
-vim.keymap.set("n", "√", ":bnext<CR>", opts)
-vim.keymap.set("n", "©", ":bprevious<CR>", opts)
-vim.keymap.set("n", "∂", ":BufDel<CR>", opts)
-vim.keymap.set("n", "<C-s>", ":bpick<CR>", opts)
+-- vim.keymap.set("n", "√", ":bnext<CR>", opts)
+-- vim.keymap.set("n", "©", ":bprevious<CR>", opts)
+-- vim.keymap.set("n", "∂", ":BufDel<CR>", opts)
+--
+-- vim.keymap.set("n", "<C-s>", ":bpick<CR>", opts)
+--
+--
+vim.keymap.set("n", "√", ":lua require(\"harpoon.ui\").nav_prev()<CR>", opts)
+vim.keymap.set("n", "©", ":lua require(\"harpoon.ui\").nav_next()<CR>", opts)
+vim.keymap.set("n", "å", ":lua require(\"harpoon.mark\").add_file()<CR>", opts)
+vim.keymap.set("n", "ß", ":lua require(\"harpoon.ui\").toggle_quick_menu()<CR>", opts)
 
+--
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
 

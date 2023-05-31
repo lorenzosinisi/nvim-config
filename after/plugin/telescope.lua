@@ -1,6 +1,7 @@
 local builtin = require('telescope.builtin')
 require("telescope").load_extension("git_worktree")
 require("telescope").load_extension("recent_files")
+require("telescope").load_extension('harpoon')
 
 vim.api.nvim_set_keymap('n', 'gw',
   "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>",
