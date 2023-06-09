@@ -11,9 +11,6 @@ return require('packer').startup(function(use)
   use 'phoenixframework/tree-sitter-heex'
   use 'jreybert/vimagit'
 
-  -- Easy navigation --
-  use 'ThePrimeagen/harpoon'
-
   use {'ggandor/leap.nvim', config = function ()
     require('leap').add_default_mappings()
   end}
